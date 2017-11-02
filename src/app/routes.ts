@@ -10,8 +10,12 @@ import {SmeUpdateQuizComponent} from './components/smeupdatequiz/smeupdatequiz.c
 import {SmeDeleteQuizComponent} from './components/smedeletequiz/smedeletequiz.component';
 import {UserComponent} from './components/user/user.component';
 import {UserTakeQuizComponent} from './components/usertakequiz/usertakequiz.component';
+import {HomeComponent} from './components/home/home.component';
 
 export const appRoutes: Routes = [{
+    path: '',
+    component: HomeComponent
+}, {
     path: 'login',
     component: LoginComponent
 }, {

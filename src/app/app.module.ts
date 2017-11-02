@@ -18,6 +18,7 @@ import {SmeDeleteQuizComponent} from './components/smedeletequiz/smedeletequiz.c
 import {UserComponent} from './components/user/user.component';
 import {UserTakeQuizComponent} from './components/usertakequiz/usertakequiz.component';
 import { appRoutes } from './routes';
+import {HomeComponent} from './components/home/home.component';
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { appRoutes } from './routes';
     SmeDeleteQuizComponent,
     UserComponent,
     UserTakeQuizComponent,
+    HomeComponent,
    ],
   providers: [
 
