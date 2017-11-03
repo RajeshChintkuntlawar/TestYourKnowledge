@@ -1,0 +1,17 @@
+body{
+    background-color: #525252;
+    text-align:center;
+    margin-top: 20px;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+    background: rgba(255, 255, 255, 0.8);
+}
+form {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}

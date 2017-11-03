@@ -1,8 +1,37 @@
-<p>This is SME page to view, create, update or delete Quizzes.</p>
 
 <router-outlet></router-outlet>
-<button class="btn btn-primary" routerLink="viewPastQuizzes">View Past Quizzes</button>
-<button class="btn btn-primary" routerLink="createNewQuiz">Create New Quiz</button>
-<button class="btn btn-primary" routerLink="updateQuiz">Update Quiz</button>
-<button class="btn btn-primary" routerLink="deleteQuiz">Delete Quiz</button>
-<button class="btn btn-primary" routerLink="signOut">Sign Out</button>
+
+
+<br><br><br>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Please choose an option</h4>
+            </div>
+            <div class="panel-body">
+                <form style="background-color:rgb(186, 229, 236)" role="form" class="col-sm-5">
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-info btn-block" routerLink="viewPastQuizzes">View Your Quizzes</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info btn-block" routerLink="createNewQuiz">Create New Quiz</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info btn-block" routerLink="updateQuiz">Update Quiz</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info btn-block" routerLink="deleteQuiz">Delete Quiz</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info btn-block" routerLink="signOut">Sign Out</button>
+                    </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
