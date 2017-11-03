@@ -29,5 +29,3 @@ INSERT INTO Answer (answertext, correctflag, questionid) values
 ('Backup file', 'Y' , 2),
 ('Animation/Movie file', 'N' , 2),
 ('MS Encarta document', 'N' , 2);
-
-Select * from Answer
