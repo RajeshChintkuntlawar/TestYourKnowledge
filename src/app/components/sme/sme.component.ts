@@ -14,21 +14,21 @@ export class SmeComponent {
     this.router.navigate(['login']);
     }
   private  viewSmeQueizzs() {
-    this.router.navigate(['sme/smeviewquizzes']);
+    this.router.navigate(['smeviewquizzes']);
     }
    private  smeViewQueizzes() {
-    this.router.navigate(['sme/smeviewquizzes']);
+    this.router.navigate(['smeviewquizzes']);
     }
 
   private  smeAddQueiz() {
-    this.router.navigate(['sme/smeaddquiz']);
+    this.router.navigate(['smeaddquiz']);
     }
 
   private  smeUpdateQueiz() {
-    this.router.navigate(['sme/smeupdatequiz']);
+    this.router.navigate(['smeupdatequiz']);
     }
 
   private  smeDeleteQueiz() {
-    this.router.navigate(['sme/smedeletequiz']);
+    this.router.navigate(['smedeletequiz']);
     }
 }

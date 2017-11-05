@@ -23,22 +23,34 @@ export const appRoutes: Routes = [{
   component: RegistrationComponent
 }, {
     path: 'sme',
-    component: SmeComponent,
-    children: [
-        {
-            path: 'smeviewquizzes',
-            component: SmeViewQuizzesComponent
-        }, {
-          path: 'smeaddquiz',
-          component: SmeAddQuizComponent
-        }, {
-          path: 'smeupdatequiz',
-          component: SmeUpdateQuizComponent
-        }, {
-          path: 'smedeletequiz',
-          component: SmeDeleteQuizComponent
-        }
-    ]
+    component: SmeComponent
+}, {
+    path: 'smeviewquizzes',
+    component: SmeViewQuizzesComponent
+}, {
+  path: 'smeaddquiz',
+  component: SmeAddQuizComponent
+}, {
+  path: 'smeupdatequiz',
+  component: SmeUpdateQuizComponent
+}, {
+  path: 'smedeletequiz',
+  component: SmeDeleteQuizComponent
+    // children: [
+    //     {
+    //         path: 'smeviewquizzes',
+    //         component: SmeViewQuizzesComponent
+    //     }, {
+    //       path: 'smeaddquiz',
+    //       component: SmeAddQuizComponent
+    //     }, {
+    //       path: 'smeupdatequiz',
+    //       component: SmeUpdateQuizComponent
+    //     }, {
+    //       path: 'smedeletequiz',
+    //       component: SmeDeleteQuizComponent
+    //     }
+    // ]
 }, {
     path: 'user',
     component: UserComponent,
