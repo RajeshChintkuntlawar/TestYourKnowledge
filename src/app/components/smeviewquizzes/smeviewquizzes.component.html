@@ -1,3 +1,37 @@
-<p>This is SME page to view Quizzes.</p>
-
 <router-outlet></router-outlet>
+
+<br><br><br>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">List of your previously created knowledge Testers</h4>
+            </div>
+            <br><br>
+            <div class="panel-body" >
+                <!-- <form style="background-color:rgb(186, 229, 236)" role="form" class="col-sm-5"> -->
+                    <table border="1" class="allrequests-table">
+                        <thead>
+                            <tr>
+                                <th width="30%">Category</th>
+                                <th width="70%">title</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody class="allrequests-body">
+            
+                        </tbody>
+                    </table>
+                    <br>
+                    <button class="btn btn-info" (click)="smeLanding()">Go Back to SME Options</button>
+                    <button class="btn btn-info" (click)="smeAddQueiz()">Add new test</button>
+                    <button class="btn btn-info" (click)="smeUpdateQueiz()">Update test</button>
+                    <button class="btn btn-info" (click)="smeDeleteQueiz()">Delete test</button>
+                    <button class="btn btn-info" (click)="signOut()">Sign Out</button>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

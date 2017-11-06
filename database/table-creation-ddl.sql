@@ -35,7 +35,7 @@ CONSTRAINT Question_pkey PRIMARY KEY (questionid)
 CREATE TABLE Roles
 (
 roleid SERIAL,
-name VARCHAR(50),
+userrole VARCHAR(50),
 CONSTRAINT Roles_pkey PRIMARY KEY (roleid)
 );
 
@@ -43,6 +43,7 @@ CREATE TABLE Users
 (
 userid SERIAL,
 username VARCHAR(50) UNIQUE ,
+password VARCHAR(50)
 lastname VARCHAR(50),
 firstname VARCHAR(50),
 email VARCHAR(50) UNIQUE ,
