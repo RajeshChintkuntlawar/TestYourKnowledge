@@ -5,13 +5,13 @@ INSERT INTO Complexity (name) values
 ('moderate'),
 ('hard');
 
-INSERT INTO Roles (name) values
+INSERT INTO Roles (userrole) values
 ('admin'),
 ('user');
 
-INSERT INTO users ( username, lastname, firstname, email, roleid)  values
-('RajeshC', 'Chintkuntlawar', 'Rajesh', 'rajesh.chintkuntlawar@capitalone.com',  1),
-('MattD', 'Dolan', 'Matt', 'matt.dolan@capitalone.com', 2);
+INSERT INTO users ( username,password, lastname, firstname, email, roleid)  values
+('RajeshC', 'test', 'Chintkuntlawar', 'Rajesh', 'rajesh.chintkuntlawar@capitalone.com',  1),
+('MattD', 'test', 'Dolan', 'Matt', 'matt.dolan@capitalone.com', 2);
 
 INSERT INTO Quiz (title, category) values
 ('File Extensions', 'Computer');
