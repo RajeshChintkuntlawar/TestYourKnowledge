@@ -23,12 +23,13 @@ user_role VARCHAR(50) not null,
 CONSTRAINT roles_pkey PRIMARY KEY (role_id)
 );
 
-CREATE TABLE quiz_type
+CREATE TABLE quiz
 (
-quiz_type_id SERIAL,
+quiz_id SERIAL,
 quiz_subject_area VARCHAR(100) not null,
 quiz_description VARCHAR(50) not null,
-CONSTRAINT quiz_pkey PRIMARY KEY (quiz_type_id)
+quiz_creator_id int not null,
+CONSTRAINT quiz_pkey PRIMARY KEY (quiz_id)
 );
 
 CREATE TABLE question_complexity
@@ -43,7 +44,7 @@ CREATE TABLE questions
 question_id SERIAL,
 question_text VARCHAR(255) UNIQUE not null,
 question_complexity_id int not null,
-quiz_type_id int  not null,
+quiz_id int  not null,
 CONSTRAINT question_pkey PRIMARY KEY (question_id)
 );
 
@@ -57,6 +58,7 @@ CONSTRAINT answer_pkey PRIMARY KEY (answer_id, question_id)
 );
 
 ALTER TABLE users ADD FOREIGN KEY (role_id) REFERENCES roles (role_id);
+ALTER TABLE quiz ADD FOREIGN KEY (quiz_creator_id) REFERENCES users (user_id);
 ALTER TABLE questions ADD FOREIGN KEY (question_complexity_id) REFERENCES question_complexity (question_complexity_id);
-ALTER TABLE questions ADD FOREIGN KEY (quiz_type_id) REFERENCES quiz_type (quiz_type_id);
+ALTER TABLE questions ADD FOREIGN KEY (quiz_id) REFERENCES quiz (quiz_id);
 ALTER TABLE answers ADD FOREIGN KEY (question_id) REFERENCES questions (question_id);
