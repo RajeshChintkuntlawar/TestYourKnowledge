@@ -14,18 +14,18 @@ INSERT INTO users(
 ('matt', 'test', 'Dolan', 'Matt', 'matt.dolan@capitalone.com', 2),
 ('devi', 'test', 'Gadipati', 'Devi', 'devi.gadipati@capitalone.com', 2);
 
-INSERT INTO quiz_type(
-    quiz_subject_area, quiz_description)
-	VALUES ('Technology','Core Java Functionality'),
-    ('Entertainment','Movies'),
-    ('Sports','Football'),
-    ('Food','American Cuisine'),
-    ('Food','Italian Cuisine');
+INSERT INTO quiz(
+    quiz_subject_area, quiz_description,quiz_creator_id)
+	VALUES ('Technology','Core Java Functionality',1),
+    ('Entertainment','Movies',2),
+    ('Sports','Football',2),
+    ('Food','American Cuisine',3),
+    ('Food','Italian Cuisine',3);
 
 INSERT INTO question_complexity(question_complexity_level_description)
 	VALUES ('Easy'),('Moderate'),('Hard');
     
-INSERT INTO questions(question_text, question_complexity_id, quiz_type_id)
+INSERT INTO questions(question_text, question_complexity_id, quiz_id)
 	VALUES ('Which of these keywords is used to make a class?',1,1),
     ('Which of the following is a valid declaration of an object of class Box?', 1,1),
     ('Which of these statement is incorrect?',2,1),
