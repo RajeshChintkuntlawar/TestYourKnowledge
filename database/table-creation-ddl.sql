@@ -11,9 +11,9 @@ CREATE TABLE answer
 (
 answer_id int not null,
 answer_option_text VARCHAR(255) not null,
-answer_option_validity_flag VARCHAR(2) not null,
+answer_option_validity_flag VARCHAR(1) not null,
 question_id int not null,
-CONSTRAINT answer_pkey PRIMARY KEY (answer_id)
+CONSTRAINT answer_pkey PRIMARY KEY (answer_id, question_id)
 );
 
 CREATE TABLE quiz_type
