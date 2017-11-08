@@ -1,62 +1,61 @@
+set schema 'testyourknowledgelevel';
 
-CREATE TABLE Complexity
+CREATE TABLE complexity
 (
-complexityid SERIAL,
-name VARCHAR(50) UNIQUE ,
-CONSTRAINT Complexity_pkey PRIMARY KEY (complexityid)
+complexity_id SERIAL,
+complexity_level_description VARCHAR(50) UNIQUE ,
+CONSTRAINT complexity_pkey PRIMARY KEY (complexity_id)
 );
 
-CREATE TABLE Answer
+CREATE TABLE answer
 (
-answerid SERIAL,
-answertext VARCHAR(255),
-correctflag VARCHAR(2),
-questionid INTEGER,
-CONSTRAINT Answer_pkey PRIMARY KEY (answerid)
+answer_id int not null,
+answer_option_text VARCHAR(255) not null,
+answer_option_validity_flag VARCHAR(2) not null,
+question_id int not null,
+CONSTRAINT answer_pkey PRIMARY KEY (answer_id)
 );
 
-CREATE TABLE Quiz
+CREATE TABLE quiz_type
 (
-quizid SERIAL,
-title VARCHAR(100),
-category VARCHAR(50),
-CONSTRAINT Quiz_pkey PRIMARY KEY (quizid)
+quiz_type_id SERIAL,
+quiz_type_title VARCHAR(100) not null,
+quiz_type_description VARCHAR(50) not null,
+CONSTRAINT quiz_pkey PRIMARY KEY (quiz_type_id)
 );
 
-CREATE TABLE Question
+CREATE TABLE question
 (
-questionid SERIAL,
-questiontext VARCHAR(255) UNIQUE ,
-complexityid INTEGER,
-quizid INTEGER,
-CONSTRAINT Question_pkey PRIMARY KEY (questionid)
+question_id SERIAL,
+question_text VARCHAR(255) UNIQUE not null,
+question_complexity_id int not null,
+quiz_type_id int  not null,
+CONSTRAINT question_pkey PRIMARY KEY (question_id)
 );
 
-CREATE TABLE Roles
+CREATE TABLE roles
 (
-roleid SERIAL,
-userrole VARCHAR(50),
-CONSTRAINT Roles_pkey PRIMARY KEY (roleid)
+role_id int not null,
+user_role VARCHAR(50) not null,
+CONSTRAINT roles_pkey PRIMARY KEY (role_id)
 );
 
-CREATE TABLE Users
+CREATE TABLE users
 (
-userid SERIAL,
-username VARCHAR(50) UNIQUE ,
-password VARCHAR(50)
-lastname VARCHAR(50),
-firstname VARCHAR(50),
-email VARCHAR(50) UNIQUE ,
-roleid INTEGER,
-CONSTRAINT Users_pkey PRIMARY KEY (userid)
+user_id SERIAL,
+user_name VARCHAR(50) UNIQUE not null,
+password VARCHAR(50) not null,
+last_name VARCHAR(50) not null,
+first_name VARCHAR(50) not null,
+email_id VARCHAR(50) UNIQUE,
+role_id int not null,
+CONSTRAINT users_pkey PRIMARY KEY (user_id)
 );
 
-ALTER TABLE Answer ADD FOREIGN KEY (questionid) REFERENCES Question (questionid);
+ALTER TABLE answer ADD FOREIGN KEY (question_id) REFERENCES question (question_id);
 
-ALTER TABLE Question ADD FOREIGN KEY (complexityid) REFERENCES Complexity (complexityid);
+ALTER TABLE question ADD FOREIGN KEY (question_complexity_id) REFERENCES complexity (complexity_id);
 
-ALTER TABLE Question ADD FOREIGN KEY (quizid) REFERENCES Quiz (quizid);
+ALTER TABLE question ADD FOREIGN KEY (quiz_type_id) REFERENCES quiz_type (quiz_type_id);
 
-ALTER TABLE Users ADD FOREIGN KEY (roleid) REFERENCES Roles (roleid);
-
-
+ALTER TABLE users ADD FOREIGN KEY (role_id) REFERENCES roles (role_id);
