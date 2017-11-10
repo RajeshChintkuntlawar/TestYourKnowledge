@@ -52,7 +52,7 @@ CREATE TABLE answers
 (
 answer_id SERIAL,
 answer_option_text VARCHAR(255) not null,
-answer_option_validity_flag VARCHAR(1) not null,
+answer_option_validity_flag VARCHAR(1) DEFAULT 'N',
 question_id int not null,
 CONSTRAINT answer_pkey PRIMARY KEY (answer_id, question_id)
 );
