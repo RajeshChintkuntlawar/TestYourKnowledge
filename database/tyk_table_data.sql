@@ -1,9 +1,8 @@
 set schema 'testyourknowledgelevel';
 
-INSERT INTO roles(
-	role_id, user_role)
-	VALUES (1, 'sme'),
-	 (2, 'user');
+INSERT INTO roles(user_role)
+	VALUES ('sme'),
+	 ('user');
 
 INSERT INTO users(
 	user_name, password, last_name, first_name, email_id, role_id)
@@ -34,28 +33,28 @@ INSERT INTO questions(question_text, question_complexity_id, quiz_id)
     ('Which of these operators is used to allocate memory for an object?',3,1);
     
 INSERT INTO answers(
-	answer_id, answer_option_text, answer_option_validity_flag, question_id)
-	VALUES (1, 'class', 'Y', 1),
-    (2, 'claass', 'N', 1),
-    (3, 'function', 'N', 1),
-    (4, 'None of the above mentioned', 'N', 1),
-    (1, 'Box obj = new Box();', 'Y', 2),
-    (2, 'Box obj = new Box;', 'N', 2),
-    (3, 'obj = new Box();', 'N', 2),
-    (4, 'new Box obj;', 'N', 2),
-    (1, 'Applets do not require a main() method at all.', 'N', 3),
-    (2, 'Every class must contain a main() method.', 'Y', 3),
-    (3, 'There can be only one main() method in a program.', 'N', 3),
-    (4, 'main() method must be made public.', 'N', 3),
-    (1, 'Public method is accessible only to subclasses of its parent class', 'N', 4),
-    (2, 'Public method can only be called by object of its class.', 'N', 4),
-    (3, 'Public method is accessible to all other classes in the hierarchy', 'Y', 4),
-    (4, 'Public method can be accessed by calling object of the public class.', 'N', 4),
-    (1, 'Memory address of allocated memory of object.', 'N', 5),
-    (2, 'NULL', 'Y', 5),
-    (3, 'Any arbitrary pointer', 'N', 5),
-    (4, 'Garbage', 'N', 5),
-    (1, 'malloc', 'N', 6),
-    (2, 'alloc', 'N', 6),
-    (3, 'new', 'Y', 6),
-    (4, 'give', 'N', 6);
+	answer_option_text, answer_option_validity_flag, question_id)
+	VALUES ('class', 'Y', 1),
+    ('claass', 'N', 1),
+    ('function', 'N', 1),
+    ('None of the above mentioned', 'N', 1),
+    ('Box obj = new Box();', 'Y', 2),
+    ('Box obj = new Box;', 'N', 2),
+    ('obj = new Box();', 'N', 2),
+    ('new Box obj;', 'N', 2),
+    ('Applets do not require a main() method at all.', 'N', 3),
+    ('Every class must contain a main() method.', 'Y', 3),
+    ('There can be only one main() method in a program.', 'N', 3),
+    ('main() method must be made public.', 'N', 3),
+    ('Public method is accessible only to subclasses of its parent class', 'N', 4),
+    ('Public method can only be called by object of its class.', 'N', 4),
+    ('Public method is accessible to all other classes in the hierarchy', 'Y', 4),
+    ('Public method can be accessed by calling object of the public class.', 'N', 4),
+    ('Memory address of allocated memory of object.', 'N', 5),
+    ('NULL', 'Y', 5),
+    ('Any arbitrary pointer', 'N', 5),
+    ('Garbage', 'N', 5),
+    ('malloc', 'N', 6),
+    ('alloc', 'N', 6),
+    ('new', 'Y', 6),
+    ('give', 'N', 6);
