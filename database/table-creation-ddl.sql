@@ -18,7 +18,7 @@ CONSTRAINT users_pkey PRIMARY KEY (user_id)
 
 CREATE TABLE roles
 (
-role_id int not null,
+role_id SERIAL,
 user_role VARCHAR(50) not null,
 CONSTRAINT roles_pkey PRIMARY KEY (role_id)
 );
@@ -50,7 +50,7 @@ CONSTRAINT question_pkey PRIMARY KEY (question_id)
 
 CREATE TABLE answers
 (
-answer_id int not null,
+answer_id SERIAL,
 answer_option_text VARCHAR(255) not null,
 answer_option_validity_flag VARCHAR(1) not null,
 question_id int not null,
