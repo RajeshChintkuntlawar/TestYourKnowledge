@@ -61,4 +61,4 @@ ALTER TABLE users ADD FOREIGN KEY (role_id) REFERENCES roles (role_id);
 ALTER TABLE quiz ADD FOREIGN KEY (quiz_creator_id) REFERENCES users (user_id);
 ALTER TABLE questions ADD FOREIGN KEY (question_complexity_id) REFERENCES question_complexity (question_complexity_id);
 ALTER TABLE questions ADD FOREIGN KEY (quiz_id) REFERENCES quiz (quiz_id);
-ALTER TABLE answers ADD FOREIGN KEY (question_id) REFERENCES questions (question_id);
+ALTER TABLE answers ADD FOREIGN KEY (question_id) REFERENCES questions (question_id) ON DELETE CASCADE;
