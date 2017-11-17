@@ -4,14 +4,14 @@ INSERT INTO roles(user_role)
 	VALUES ('sme'),
 	 ('user');
 
-INSERT INTO users(
+INSERT INTO testyourknowledgelevel.users(
 	user_name, password, last_name, first_name, email_id, role_id)
     values
-('rajesh', 'test', 'Chintkuntlawar', 'Rajesh', 'rajesh.chintkuntlawar@capitalone.com',  1),
-('imrana', 'test', 'Islam', 'Imrana', 'imrana.islam@capitalone.com',  1),
-('brunda', 'test', 'Prakash', 'Brunda', 'brunda.prakash@capitalone.com',  1),
-('matt', 'test', 'Dolan', 'Matt', 'matt.dolan@capitalone.com', 2),
-('devi', 'test', 'Gadipati', 'Devi', 'devi.gadipati@capitalone.com', 2);
+('rajesh', crypt('test',gen_salt('md5')), 'Chintkuntlawar', 'Rajesh', 'rajesh.chintkuntlawar@capitalone.com',  1),
+('imrana', crypt('test',gen_salt('md5')), 'Islam', 'Imrana', 'imrana.islam@capitalone.com',  1),
+('brunda', crypt('test',gen_salt('md5')), 'Prakash', 'Brunda', 'brunda.prakash@capitalone.com',  1),
+('matt', crypt('test',gen_salt('md5')), 'Dolan', 'Matt', 'matt.dolan@capitalone.com', 2),
+('devi', crypt('test',gen_salt('md5')), 'Gadipati', 'Devi', 'devi.gadipati@capitalone.com', 2);
 
 INSERT INTO quiz(
     quiz_subject_area, quiz_description,quiz_creator_id)
