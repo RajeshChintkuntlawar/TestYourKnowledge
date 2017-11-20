@@ -1,6 +1,5 @@
 --drop schema testyourknowledgelevel cascade;
-CREATE SCHEMA testyourknowledgelevel
-    AUTHORIZATION postgres;
+CREATE SCHEMA testyourknowledgelevel;
 
 set schema 'testyourknowledgelevel';
 
